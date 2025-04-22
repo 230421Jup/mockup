@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Детальный блог</title>
+
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <section>
+
+                <div class="header-content">
+                    <a class="logo" href="homePage.html"><img src="img/logo.png" alt="logo image" /></a>
+                    <nav class="header-items">
+                        <li><a href="../homePage.html">Домой</a></li>
+                        <li><a href="../project.html">Проект</a></li>
+                        <li><a href="../blog.html">Блог</a></li>
+                        <li><a href="blogDetails.html">Детали</a></li>
+
+                    </nav>
+                </div>
+            </section>
+            <section>
+                <div class="container_baner_blog_det">
+                    <div class="background_container"></div>
+
+                </div>
+
+
+            </section>
+        </header>
+        <main>
+
+            <div class="nav-tags">
+                <div class="nav-title">Теги</div>
+                <nav class="nav">
+                    <router-link class="nav-item" to="/kitchen">Кухня</router-link> <!--  -->
+                    <router-link class="nav-item" to="/bedroom">Спальня</router-link>
+                    <router-link class="nav-item" to="/building">Здание</router-link>
+                </nav>
+            </div>
+
+            <router-view></router-view> <!-- здесь показывается текущий активный роут компонент из массива routes -->
+        </main>
+        <footer>
+            <section>
+                <div class="container_footer">
+                    <div class="footer_block">
+                        <div class="logo_footer">
+                            <img src="img/logo1.svg" alt="logo">
+                            <p class="logo_text_footer">Interno</p>
+                        </div>
+                        <div class="social_footer">
+                            <a href="#"><img class="twit_logo" src="img/twin.svg" alt=""></a>
+                            <a href="#"><img class="in_logo" src="img/in.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="footer_block">
+                        <h2>Страницы</h2>
+                        <ul>
+                            <li>
+                                <a href="#">Домой</a>
+                            </li>
+                            <li>
+                                <a href="#">Проект</a>
+                            </li>
+                            <li>
+                                <a href="#">Блог</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_block">
+                        <h2>Контакты</h2>
+                        <address>
+                            <p>55 East Birchwood Ave. Brooklyn, New York 11201</p>
+                            <a href="mailto:contact@interno.com">contact@interno.com</a>
+                            <a href="tel:+11234567890">(123) 456 - 7890</a>
+                        </address>
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </div>
+    <style>
+        .kitchen_content h2 {
+            width: 680px;
+            font-size: 50px;
+            padding-bottom: 21px;
+            font-family: DM-serif, sans-serif;
+            font-weight: 400;
+        }
+        .nav-tags {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: end;
+            text-align: right;
+            
+            
+            
+
+        }
+       
+
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 24px;
+            
+        }
+
+        .nav-item {
+            color: black;
+            background-color: #F4F0EC;
+            border-radius: 5px;
+            padding: 5px 10px;
+            transition-duration: 0.2s;
+            transition-property: color, background-color;
+        }
+
+        .nav-item.router-link-active {
+            color: white;
+            background-color: black;
+            
+        }
+        .kitchen_img {
+            
+             margin-bottom: 46px; 
+             max-width: 804px;
+             
+             
+        }
+        .kitchen_img span {
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            margin-top: 46px;
+            font-family: Jost-Regular, sans-serif;
+            font-size: 16px;
+
+
+        }
+        .kitchen_img a{
+            display: flex;
+            justify-content: end;
+            align-items: end;
+            font-family: Jost-Regular, sans-serif;
+            font-size: 16px;
+            
+            
+        }
+        
+        
+        
+       .kitchen_content_text {
+        max-width:  804px;
+        font-family: Jost, sans-serif;
+        font-size: 22px;
+        margin-bottom: 35px;
+        word-spacing: 1em;
+        line-height: 1.5em;
+        color: rgba(77, 80, 83, 1);
+       }
+       .kitchen_content_two {
+        margin-top: 27px;
+       }
+       .kitchen_content_two h2 {
+        font-family: DM Serif Display, sans-serif;
+        font-size: 50px;
+        font-weight: 700;
+       }
+       .kitchen_content_two p {
+        width: 800px;
+        font-family: Jost, sans-serif;
+        font-size: 22px;
+        word-spacing: 1em;
+        line-height: 1.5em;
+        color: rgba(77, 80, 83, 1);
+
+       }
+       .kitchen_content_two ol {
+        width: 732px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 24px;
+        row-gap: 30px;
+        font-family: DM Serif Display, sans-serif;
+        font-size: 20px;
+        line-height: 125%;
+        word-spacing: 1em;
+        color: rgba(77, 80, 83, 1);
+       }
+       .img_kitchen_two p{
+        width: 800px;
+        font-family: Jost, sans-serif;
+        font-size: 22px;
+        line-height: 150%;
+        word-spacing: 1.5em;
+        color: rgba(77, 80, 83, 1);
+        margin-bottom: 350px;
+       }
+       .bedroom_content h2 {
+        width: 565px;
+        font-family: DM Serif Display, sans-serif;
+        font-size: 50px;
+        font-weight: 600;
+        word-spacing: 1em;
+        line-height: 150%;
+        color:rgba(41, 47, 54, 1); 
+
+       }
+       .bedroom_content {
+        width: 658px;
+        
+       }
+
+       .bedroom_content p {
+        
+        padding-bottom: 40px;
+        font-family: Jost, sans-serif;
+        font-size: 22px;
+        word-spacing: 1em;
+        line-height: 150%;
+        color: rgba(41, 47, 54, 1);
+       }
+       .bedroom_content span {
+        
+        font-family: Jost, sans-serif;
+        font-size: 22px; 
+        word-spacing: 1em;
+        line-height: 150%;
+        color: rgba(41, 47, 54, 1);
+
+        
+
+       }
+       .bedroom_logo {
+        margin-top: 450px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+       }
+       .bedroom_wing {
+        margin-top: 315px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 108px;
+       }
+    </style>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue-router@4"></script>
+    <script>
+
+        const KitchenPage = {
+            template: `
+                <div class="kitchen_content">
+                    <h2>Создадим лучший макет перепланировки </h2>
+                    <div class="kitchen_img">
+                    <img class="kitchen" src="./img/kitchen.png" alt="kitchen">
+                    <span>26 декабря 2024</span>
+                    <a href="">Интерьер / Домой / Декор</a>
+                    </div>
+
+                    <div class="kitchen_content_text">
+
+
+                    
+                      <p>В своей статье от 1994-го года журнал «Before & After» отследил фразу «Lorem ipsum ...» до философского трактата Цицерона О пределах добра и зла, написанного в 45 году до нашей эры на латинском языке. 
+                       В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»</p>
+                </div>
+                <div class="quotes_text">
+                    <img class="quotes" src="./img/Quotes.png" alt="guotes>"
+                    </div>
+
+                    <div class="kitchen_content_two">
+                        <h2>Design sprints are great</h2>
+                        <p>В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»</p>
+                        <ol>
+                           <li> 
+                            1. С того времени этот, похожий на латинский, текст стал стандартом в печатной промышленности
+                               для  примеров шрифтов и текстов.
+                            </li>
+
+                            <li>
+                            2. С того времени этот, похожий на латинский, текст стал стандартом в печатной  промышленности
+                               для примеров шрифтов и текстов.
+                            </li>
+
+                            <li> 
+                            3. С того времени этот, похожий на латинский, текст стал стандартом в печатной промышленности
+                               для примеров шрифтов и текстов.
+                                </li>
+                                </ol>
+                                </div>
+                                <div class="img_kitchen_two">
+                                    <img src="./img/kitchen_2.png" alt="kitchen_two">
+                                    <p> В своей статье от 1994-го года журнал «Before & After» отследил фразу «Lorem ipsum ...» до философского трактата Цицерона О пределах добра и зла, написанного в 45 году до нашей эры на латинском языке. </p>
+                                    </div>
+
+            `
+        };
+        const BedroomPage = {
+            template: `
+                <div class="bedroom_content">
+                    <h2>Минималистичные спальни</h2>
+                    <p>В своей статье от 1994-го года журнал «Before & After» отследил фразу «Lorem ipsum ...» до философского трактата Цицерона О пределах добра и зла, написанного в 45 году до нашей эры на латинском языке.</p>
+
+
+                     <span>В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...».</span>
+                </div>
+                <div class="bedroom_logo">
+                    <img src="./img/Zoom Icon.png" alt="zoom">
+                    
+
+                </div>
+                <div class="bedroom_wing">
+                    <img src="./img/pngwing 1.png" alt="wing">
+                    </div>
+            `
+        };
+        const BuildingPage = {
+            template: `
+                <div>
+                    <h2>BuildingPage</h2>
+                    <p>В своей статье от 1994-го года журнал «Before & After» отследил фразу «Lorem ipsum ...» до философского трактата Цицерона О пределах добра и зла, написанного в 45 году до нашей эры на латинском языке. 
+                     В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...», и переводится как «Нет никого, кто любил бы свою боль, кто искал бы ее и хотел бы чтобы она была у него. Потому что это боль...»</p>
+                </div>
+            `
+        };
+
+        const routes = [
+            { path: '/kitchen', component: KitchenPage },
+            { path: '/bedroom', component: BedroomPage },
+            { path: '/building', component: BuildingPage },
+            { path: '/', redirect: '/kitchen' },
+        ];
+
+        const router = VueRouter.createRouter({
+            history: VueRouter.createWebHashHistory(),
+            routes
+        });
+
+        const app = Vue.createApp({
+
+        });
+
+        app.use(router);
+
+        app.mount('#app');
+    </script>
+</body>
+
+</html>
